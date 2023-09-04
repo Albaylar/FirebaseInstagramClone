@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		699EBA482AA5D12E00686D08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 699EBA462AA5D12E00686D08 /* Main.storyboard */; };
 		699EBA4A2AA5D13100686D08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 699EBA492AA5D13100686D08 /* Assets.xcassets */; };
 		699EBA4D2AA5D13100686D08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 699EBA4B2AA5D13100686D08 /* LaunchScreen.storyboard */; };
+		699EBA572AA5D42000686D08 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 699EBA562AA5D42000686D08 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		699EBA492AA5D13100686D08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		699EBA4C2AA5D13100686D08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		699EBA4E2AA5D13100686D08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		699EBA562AA5D42000686D08 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				699EBA492AA5D13100686D08 /* Assets.xcassets */,
 				699EBA4B2AA5D13100686D08 /* LaunchScreen.storyboard */,
 				699EBA4E2AA5D13100686D08 /* Info.plist */,
+				699EBA562AA5D42000686D08 /* GoogleService-Info.plist */,
 			);
 			path = FirebaseInstagramClone;
 			sourceTree = "<group>";
@@ -103,7 +106,7 @@
 				};
 			};
 			buildConfigurationList = 699EBA382AA5D12E00686D08 /* Build configuration list for PBXProject "FirebaseInstagramClone" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				699EBA4D2AA5D13100686D08 /* LaunchScreen.storyboard in Resources */,
+				699EBA572AA5D42000686D08 /* GoogleService-Info.plist in Resources */,
 				699EBA4A2AA5D13100686D08 /* Assets.xcassets in Resources */,
 				699EBA482AA5D12E00686D08 /* Main.storyboard in Resources */,
 			);
