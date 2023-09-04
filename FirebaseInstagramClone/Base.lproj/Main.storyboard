@@ -58,6 +58,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="emailText" destination="Ff0-Iu-R7F" id="ACy-XB-hv1"/>
+                        <outlet property="passwordText" destination="PFV-CB-0iQ" id="BTP-EL-jaR"/>
                         <segue destination="LUO-YH-UJq" kind="presentation" identifier="toFeedVC" modalPresentationStyle="fullScreen" id="DSj-jY-EiX"/>
                     </connections>
                 </viewController>
@@ -128,7 +130,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="hHp-aQ-eaV">
             <objects>
-                <tabBarController id="LUO-YH-UJq" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="LUO-YH-UJq" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="PJH-A6-5NZ"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CEi-MO-vBA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
