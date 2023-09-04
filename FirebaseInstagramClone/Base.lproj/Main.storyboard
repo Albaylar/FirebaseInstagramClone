@@ -74,14 +74,53 @@
                     <view key="view" contentMode="scaleToFill" id="NRK-Yb-8O1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus.app" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rYl-Qo-Dpk">
+                                <rect key="frame" x="10" y="41.666666666666686" width="373" height="584"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMx-dW-ncO">
+                                <rect key="frame" x="157" y="752" width="79" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Upload"/>
+                                <connections>
+                                    <action selector="uploadButton:" destination="tnU-vO-IBV" eventType="touchUpInside" id="7Ot-8z-t4A"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Açıklama" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Saw-A6-OoZ">
+                                <rect key="frame" x="16" y="652" width="367" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Açıklama" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rEQ-iq-sfS">
+                                <rect key="frame" x="16" y="652" width="367" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Fbk-h8-Bfw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IMx-dW-ncO" firstAttribute="top" secondItem="Saw-A6-OoZ" secondAttribute="bottom" constant="66" id="66t-ON-ulN"/>
+                            <constraint firstItem="rYl-Qo-Dpk" firstAttribute="top" secondItem="Fbk-h8-Bfw" secondAttribute="top" constant="40" id="BGu-XS-tg0"/>
+                            <constraint firstItem="Saw-A6-OoZ" firstAttribute="top" secondItem="rYl-Qo-Dpk" secondAttribute="bottom" constant="25" id="CkG-FC-XdN"/>
+                            <constraint firstItem="rYl-Qo-Dpk" firstAttribute="leading" secondItem="Fbk-h8-Bfw" secondAttribute="leading" constant="10" id="MGJ-TH-9yW"/>
+                            <constraint firstItem="Saw-A6-OoZ" firstAttribute="leading" secondItem="NRK-Yb-8O1" secondAttribute="leadingMargin" id="YsG-q1-URr"/>
+                            <constraint firstItem="Saw-A6-OoZ" firstAttribute="trailing" secondItem="rYl-Qo-Dpk" secondAttribute="trailing" id="sNa-Nb-lnT"/>
+                            <constraint firstItem="Fbk-h8-Bfw" firstAttribute="bottom" secondItem="rYl-Qo-Dpk" secondAttribute="bottom" constant="176" id="vlb-Li-KTt"/>
+                            <constraint firstItem="Fbk-h8-Bfw" firstAttribute="trailing" secondItem="rYl-Qo-Dpk" secondAttribute="trailing" constant="10" id="wgC-sH-iVc"/>
+                            <constraint firstItem="IMx-dW-ncO" firstAttribute="centerX" secondItem="rYl-Qo-Dpk" secondAttribute="centerX" id="xj1-NA-j1p"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="square.and.arrow.up.fill" catalog="system" id="S74-2i-c2T"/>
+                    <connections>
+                        <outlet property="expanationText" destination="rEQ-iq-sfS" id="h28-fs-5Ow"/>
+                        <outlet property="imageView" destination="rYl-Qo-Dpk" id="bdH-aE-nIW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l62-qs-F88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="605" y="218"/>
+            <point key="canvasLocation" x="603.81679389312978" y="217.60563380281693"/>
         </scene>
         <!--Settings-->
         <scene sceneID="JyD-GC-FN4">
@@ -118,14 +157,29 @@
                     <view key="view" contentMode="scaleToFill" id="NCd-AB-oGD">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c9K-55-DVq">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="803"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Gqf-kY-4CS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gqf-kY-4CS" firstAttribute="trailing" secondItem="c9K-55-DVq" secondAttribute="trailing" id="NBk-Bv-5ZJ"/>
+                            <constraint firstItem="Gqf-kY-4CS" firstAttribute="bottom" secondItem="c9K-55-DVq" secondAttribute="bottom" id="PTY-9r-xiC"/>
+                            <constraint firstItem="c9K-55-DVq" firstAttribute="top" secondItem="Gqf-kY-4CS" secondAttribute="top" id="or8-k9-anR"/>
+                            <constraint firstItem="c9K-55-DVq" firstAttribute="leading" secondItem="Gqf-kY-4CS" secondAttribute="leading" id="szE-l0-8Bz"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" image="list.triangle" catalog="system" id="7fM-6C-Ny6"/>
+                    <connections>
+                        <outlet property="tableView" destination="c9K-55-DVq" id="Fdr-D7-fte"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VBa-lN-Wrq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="606" y="-444"/>
+            <point key="canvasLocation" x="605.3435114503817" y="-444.36619718309862"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hHp-aQ-eaV">
@@ -151,6 +205,7 @@
     <resources>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="list.triangle" catalog="system" width="128" height="91"/>
+        <image name="plus.app" catalog="system" width="128" height="114"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
