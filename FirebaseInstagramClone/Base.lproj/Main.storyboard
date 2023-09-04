@@ -16,13 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljB-BO-Xxu">
-                                <rect key="frame" x="216" y="383" width="146" height="71"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iia-6g-UwT">
+                                <rect key="frame" x="42" y="383" width="142" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Sign Up"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign In"/>
                                 <connections>
-                                    <action selector="signUpClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qFu-va-iEi"/>
+                                    <action selector="signInClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5p6-ry-8Hy"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="emaiil" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ff0-Iu-R7F">
@@ -44,13 +44,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iia-6g-UwT">
-                                <rect key="frame" x="42" y="383" width="142" height="69"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljB-BO-Xxu">
+                                <rect key="frame" x="216" y="381" width="146" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Sign In"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign Up"/>
                                 <connections>
-                                    <action selector="signInClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5p6-ry-8Hy"/>
+                                    <action selector="signUpClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qFu-va-iEi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -68,7 +68,7 @@
         <!--Upload-->
         <scene sceneID="UU6-HY-jB5">
             <objects>
-                <viewController id="tnU-vO-IBV" sceneMemberID="viewController">
+                <viewController id="tnU-vO-IBV" customClass="UploadViewController" customModule="FirebaseInstagramClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NRK-Yb-8O1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,17 +81,45 @@
             </objects>
             <point key="canvasLocation" x="605" y="218"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="JyD-GC-FN4">
+            <objects>
+                <viewController id="gfc-La-1qC" customClass="SettingsViewController" customModule="FirebaseInstagramClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6L9-qW-scc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GT7-H4-Dke">
+                                <rect key="frame" x="133" y="409" width="121" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="LogOut"/>
+                                <connections>
+                                    <action selector="logOutClicked:" destination="gfc-La-1qC" eventType="touchUpInside" id="gAR-jG-vhy"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="toViewContoller" modalPresentationStyle="fullScreen" id="lEw-k8-KbI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7z0-Vd-2KK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="gearshape" catalog="system" id="bJr-Vf-6AH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IAo-6R-tmE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="603.81679389312978" y="909.85915492957747"/>
+        </scene>
         <!--Feed-->
         <scene sceneID="0yU-Ui-WGT">
             <objects>
-                <viewController id="AQi-Om-52N" sceneMemberID="viewController">
+                <viewController id="AQi-Om-52N" customClass="FeedViewController" customModule="FirebaseInstagramClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NCd-AB-oGD">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Gqf-kY-4CS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Feed" image="list.bullet.rectangle.portrait" catalog="system" id="7fM-6C-Ny6"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="list.triangle" catalog="system" id="7fM-6C-Ny6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VBa-lN-Wrq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,6 +138,7 @@
                     <connections>
                         <segue destination="AQi-Om-52N" kind="relationship" relationship="viewControllers" id="qhF-yk-L3G"/>
                         <segue destination="tnU-vO-IBV" kind="relationship" relationship="viewControllers" id="Li9-rQ-0hZ"/>
+                        <segue destination="gfc-La-1qC" kind="relationship" relationship="viewControllers" id="iqS-sl-WZg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8s3-CT-KZt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -118,7 +147,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="list.triangle" catalog="system" width="128" height="91"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
