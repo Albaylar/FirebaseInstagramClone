@@ -8,7 +8,8 @@ target 'FirebaseInstagramClone' do
 pod 'FirebaseAnalytics'
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
-pod 'FirebaseStorage'	
+pod 'FirebaseStorage'
+pod 'SDWebImage', '~> 5.0'	
 
   # Pods for FirebaseInstagramClone
 
