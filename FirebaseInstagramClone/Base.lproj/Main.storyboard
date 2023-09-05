@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -79,9 +80,8 @@
                                 <rect key="frame" x="10" y="41.666666666666686" width="373" height="584"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMx-dW-ncO">
-                                <rect key="frame" x="157" y="752" width="79" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Upload"/>
+                                <rect key="frame" x="157.66666666666666" y="752" width="78" height="34.333333333333371"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SHARE"/>
                                 <connections>
                                     <action selector="uploadButton:" destination="tnU-vO-IBV" eventType="touchUpInside" id="7Ot-8z-t4A"/>
                                 </connections>
@@ -140,11 +140,15 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="toViewContoller" modalPresentationStyle="fullScreen" id="lEw-k8-KbI"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="AH4-bk-pka">
+                                <rect key="frame" x="54" y="156" width="290" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7z0-Vd-2KK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="gearshape" catalog="system" id="bJr-Vf-6AH"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="bJr-Vf-6AH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IAo-6R-tmE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,7 +207,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="Group" width="127.5" height="85"/>
+        <image name="gear" catalog="system" width="128" height="122"/>
         <image name="list.triangle" catalog="system" width="128" height="91"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>

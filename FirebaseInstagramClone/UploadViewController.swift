@@ -22,6 +22,13 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         imageView.isUserInteractionEnabled = true
         let imageTabRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapImage))
         imageView.addGestureRecognizer(imageTabRecognizer)
+        
+        let gestureRecognizerKeyboard = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(gestureRecognizerKeyboard)
+    }
+    
+    @objc func hideKeyboard(){
+        self.view.endEditing(true)
     }
     @objc func tapImage(){
         let picker = UIImagePickerController()
@@ -31,10 +38,10 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         present(picker, animated: true)
         
         
+        
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imageView.image = info[.originalImage] as? UIImage
-        
         self.dismiss(animated: true)
     }
     func makeAlert(title: String , message: String){
@@ -67,12 +74,14 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                             var firestoreReferance : DocumentReference? = nil
                             let firestorePost = ["imageURL": imageURL!,"PostedBy": Auth.auth().currentUser!.email!, "postComment" : self.expanationText.text!,"Date": FieldValue.serverTimestamp(), "likes" : 0] as [String : Any]
                             
+                            
                             firestoreReferance = firestoreDataBase.collection("Posts").addDocument(data: firestorePost,completion: { error in
                                 if error != nil {
                                     self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error" )
                                 }else{
                                     self.imageView.image = UIImage(systemName:"plus.app")
                                     self.expanationText.text = ""
+                                    
                                     self.tabBarController?.selectedIndex = 0
                                 }
                             })
