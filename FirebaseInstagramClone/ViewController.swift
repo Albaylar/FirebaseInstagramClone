@@ -21,10 +21,6 @@ class ViewController: UIViewController {
     @objc func hideKeyboard(){
         self.view.endEditing(true)
     }
-    
-
-
-
     @IBAction func signUpClicked(_ sender: Any) {
         
         if emailText.text != "" && passwordText.text != "" {
@@ -37,11 +33,7 @@ class ViewController: UIViewController {
                     self.performSegue(withIdentifier: "toFeedVC", sender: nil)
                 }
             }
-            
-            
-            
-            
-            
+
         } else {
             makeAlert(title: "Error", message: "Username/Password")
         }

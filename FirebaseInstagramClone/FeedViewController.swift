@@ -63,10 +63,8 @@ class FeedViewController: UIViewController {
                     }
                     self.tableView.reloadData()
                 }
-                
             }
         }
-        
     }
 }
 extension FeedViewController : UITableViewDelegate, UITableViewDataSource {
